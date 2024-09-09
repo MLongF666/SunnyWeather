@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.mlf.sunnyweather.ui.place.PlaceViewModel" />
+        <variable
+            name="place"
+            type="com.mlf.sunnyweather.logic.model.Place" />
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+        android:layout_gravity="center_vertical">
+        <TextView
+            android:text="@{place.name}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="20sp"/>
+        <TextView
+            android:text="@{place.address}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+</layout>
